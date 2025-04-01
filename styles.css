@@ -1,0 +1,189 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #2e2e2e;
+    color: white;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header .header-icons a {
+    margin-left: 20px;
+}
+
+/* Баннер */
+.banner {
+    position: relative;
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Черный цвет с прозрачностью */
+    z-index: 1; /* Псевдоэлемент будет ниже текста */
+}
+
+.banner-text {
+    position: relative;
+    z-index: 2; /* Текст будет поверх псевдоэлемента */
+}
+
+.banner-text h1 {
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.cta-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    margin-top: 20px; /* Отступ сверху */
+}
+
+/* Категории товаров */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+.category {
+    text-align: center;
+}
+
+.category img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.category h2 {
+    margin-top: 10px;
+}
+
+/* Отзывы */
+.reviews {
+    background-color: #f1f1f1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.review {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.reviews h2 {
+    margin-bottom: 30px;
+}
+
+/* Преимущества */
+.advantages {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.advantage {
+    width: 200px;
+}
+
+.advantage span {
+    font-size: 40px;
+}
+
+/* Подвал */
+footer {
+    background-color: #2e2e2e;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .footer-links {
+    margin-bottom: 20px;
+}
+
+footer .footer-links a {
+    margin: 0 15px;
+    color: white;
+}
+
+footer .social-media {
+    margin-bottom: 20px;
+}
+
+footer .social-media a {
+    margin: 0 15px;
+    color: white;
+}
+
+footer .newsletter input {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+footer .newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 20px;
+    font-size: 16px;
+}
